@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import Quote from "./quote";
+
 export default class App extends Component {
   constructor() {
     super();
@@ -25,10 +27,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className="quote">
-          <h1>{this.state.quote.title}!</h1>
-          <h4>{this.state.quote.quote}</h4>
-        </div>
+        <Quote quoteData={this.state.quote} />
       </div>
     );
   }
